@@ -17,12 +17,15 @@
 
 .selectedFilm {
   border: 2px solid transparent;
+  opacity: 0.8;
   transition:
+    opacity 300ms ease-in-out,
     border-color 300ms ease-out,
     transform 300ms ease-out;
 }
 
 .selectedFilm:hover {
-  border-color: rgb(230, 230, 230);
+  opacity: 1;
+  border-color: #e50914;
   transform: translate(1px, 0px) scale(1.05);
 }

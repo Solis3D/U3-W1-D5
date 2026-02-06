@@ -13,11 +13,11 @@ class RowSection extends Component {
   rowRef = createRef();
 
   scrollLeft = () => {
-    this.rowRef.current?.scrollBy({ left: -300.16, behavior: "smooth" });
+    this.rowRef.current.scrollBy({ left: -300.16, behavior: "smooth" });
   };
 
   scrollRight = () => {
-    this.rowRef.current?.scrollBy({ left: 300.16, behavior: "smooth" });
+    this.rowRef.current.scrollBy({ left: 300.16, behavior: "smooth" });
   };
 
   getFilms = () => {
@@ -54,7 +54,7 @@ class RowSection extends Component {
         <div className=" d-flex justify-content-between align-items-center">
           <h4>{this.props.title}</h4>
 
-          <div className=" d-none d-md-flex gap-2">
+          <div className=" d-none d-lg-flex gap-2">
             <Button variant="dark" className="px-2" onClick={this.scrollLeft}>
               <i className="bi bi-caret-left" />
             </Button>
