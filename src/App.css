@@ -1,0 +1,28 @@
+.body-bg {
+  background-color: #151516;
+}
+
+.bg-custom {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.scroll {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.selectedFilm {
+  border: 2px solid transparent;
+  transition:
+    border-color 300ms ease-out,
+    transform 300ms ease-out;
+}
+
+.selectedFilm:hover {
+  border-color: rgb(230, 230, 230);
+  transform: translate(1px, 0px) scale(1.05);
+}
