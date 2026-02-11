@@ -37,7 +37,7 @@ const MovieDetails = function () {
       {isLoading && <p>Loading...</p>}
       {!isLoading && choosenMovie && (
         <Row className=" justify-content-center my-5">
-          <Col xs={12} md={6} className="bg-black d-flex flex-column align-items-center px-3 py-2">
+          <Col xs={12} md={8} lg={6} className="bg-black d-flex flex-column align-items-center px-3 py-2">
             <h1 className=" display-3 align-self-start">{choosenMovie.Title}</h1>
             <Image fluid src={choosenMovie.Poster} className="my-5"></Image>
             <div className="my-3 align-self-start">
@@ -50,7 +50,9 @@ const MovieDetails = function () {
                 <p className=" fs-5">Cast: {choosenMovie.Actors}</p>
                 <p className=" fs-5">Rating: {choosenMovie.imdbRating}</p>
               </div>
-              <p className="fs-5">Plot: {choosenMovie.Plot}</p>
+              <div className=" bg-primary p-2">
+                <p className="fs-5">Plot: {choosenMovie.Plot}</p>
+              </div>
             </div>
           </Col>
         </Row>
