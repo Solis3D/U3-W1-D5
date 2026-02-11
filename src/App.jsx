@@ -9,12 +9,13 @@ import Footer from "./components/Footer";
 import TVShows from "./components/TVShows";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MovieDetails from "./components/MovieDetails";
+import MyNavbar from "./components/MyNavbar";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="d-flex flex-column min-vh-100 body-bg">
-        <Header />
+        <MyNavbar />
 
         <Routes>
           <Route path="/" element={<MyMain />}></Route>
