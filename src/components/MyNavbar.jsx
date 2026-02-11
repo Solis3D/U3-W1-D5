@@ -1,7 +1,8 @@
 import { Container, Nav, Navbar, NavDropdown, NavItem, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const MyNavbar = function () {
+  const location = useLocation();
   return (
     <Navbar expand="lg" bg="black" variant="dark">
       <Container fluid className="px-lg-4">
