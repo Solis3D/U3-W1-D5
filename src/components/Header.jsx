@@ -1,4 +1,5 @@
 import { Container, Nav, Navbar, NavDropdown, Image, Dropdown, NavItem } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = function () {
   return (
@@ -6,16 +7,18 @@ const Header = function () {
       <Navbar expand="lg" bg="black" variant="dark">
         <Container fluid className="px-lg-4">
           <Navbar.Brand className="navbar-brand" href="#">
-            <Image src="src\assets\netflix_logo.png" alt="Netflix logo" width="100" />
+            <Image src="../src/assets/netflix_logo.png" alt="Netflix logo" width="100" />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="gap-2">
-              <Nav.Link active href="#home">
+              <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
                 Home
-              </Nav.Link>
-              <Nav.Link href="#link">TV Shows</Nav.Link>
+              </Link>
+              <Link to="/TVShows" className={location.pathname === "/TVShows" ? "nav-link active" : "nav-link"}>
+                TV Shows
+              </Link>
               <Nav.Link href="#link">Movies</Nav.Link>
               <Nav.Link href="#link">Recently Added</Nav.Link>
               <Nav.Link href="#link">My List</Nav.Link>

@@ -50,7 +50,7 @@ class RowSection extends Component {
 
   render() {
     return (
-      <Container fluid className=" mt-3 mb-5">
+      <Container fluid className=" mt-2 mb-5">
         <div className=" d-flex justify-content-between align-items-center">
           <h4>{this.props.title}</h4>
 
@@ -74,7 +74,9 @@ class RowSection extends Component {
                     </Spinner>
                   </Col>
                 ))
-              : this.state.films.map((film, i) => <MyCard key={`${film.imdbID}-${i}`} imgSrc={film.Poster} title={film.Title} year={film.Year} />)}
+              : this.state.films.map((film, i) => (
+                  <MyCard key={`${film.imdbID}-${i}`} imgSrc={film.Poster} title={film.Title} year={film.Year} movieID={film.imdbID} />
+                ))}
           </Row>
         </div>
       </Container>
