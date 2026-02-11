@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Col, Row, Image } from "react-bootstrap";
+import { Col, Row, Image, Spinner } from "react-bootstrap";
 
 const filmURL = "https://www.omdbapi.com/?apikey=4ba7697&i=";
 
@@ -34,7 +34,15 @@ const MovieDetails = function () {
 
   return (
     <>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <Row className=" justify-content-center my-5">
+          <Col xs={12} md={8} lg={6} className=" bg-black d-flex justify-content-center align-items-center" style={{ height: "300px" }}>
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          </Col>
+        </Row>
+      )}
       {!isLoading && choosenMovie && (
         <Row className=" justify-content-center my-5">
           <Col xs={12} md={8} lg={6} className="bg-black d-flex flex-column align-items-center px-3 py-2">
